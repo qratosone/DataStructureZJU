@@ -3,7 +3,6 @@
 
 #include "stdafx.h"
 #include<iostream>
-
 using namespace std;
 class Node {
 public:
@@ -59,19 +58,34 @@ public:
 	}
 	void insertAfter(int val, int exp) {
 		Node* p = head;
-		while (true)
+		while (p!=NULL)
 		{
 			if (p->_exp>exp) {
 				p = p->next;
 			}
 			else
 			{
+				if (p->_exp==exp)
+				{
+					p->_val += val;
+				}
+				else
+				{
+					Node* newNode = new Node(val, exp);
+					newNode->prev = p->prev;
+					p->prev->next = newNode;
+					newNode->next = p;
+					p->prev = newNode;
+				}
 				break;
 			}
 		}
+		if (p==NULL)
+		{
+			p = new Node(val, exp);
+		}
 	}
 	void traverse() {
-//		cout << "traverse"<<endl;
 		Node* p = head;
 		while (p)
 		{
@@ -80,9 +94,7 @@ public:
 		}
 		cout << endl;
 	}
-
 };
-
 void LLplus(LinkList L1, LinkList L2,LinkList& result) {
 	Node* p1 = L1.head;
 	LinkList temp2;
@@ -147,31 +159,33 @@ void LLplus(LinkList L1, LinkList L2,LinkList& result) {
 }
 void LLmultiply(LinkList l1, LinkList l2, LinkList& result) {
 	LinkList temp;
+	LinkList temp2;
 	Node* p1 = l1.head;
 	Node* p2 = l2.head;
-	bool flag = false;
+	//cout << "p1 " << p1->_val << " " << p1->_exp << endl;
+	while (p2 != NULL) {
+		//	cout << "p2 " << p2->_val << " " << p2->_exp << endl;
+		int val = p1->_val*p2->_val;
+		int exp = p1->_exp + p2->_exp;
+		temp.insert(val, exp);
+		p2 = p2->next;
+	}
+	temp.traverse();
+	p1 = p1->next;
+	p2 = l2.head;
 	while (p1!=NULL)
 	{
-		//cout << "p1 " << p1->_val << " " << p1->_exp << endl;
 		while (p2 != NULL) {
-		//	cout << "p2 " << p2->_val << " " << p2->_exp << endl;
 			int val = p1->_val*p2->_val;
 			int exp = p1->_exp + p2->_exp;
-			temp.insert(val, exp);
+			temp.insertAfter(val, exp);
+			temp.traverse();
 			p2 = p2->next;
 		}
-		if (!flag) {
-			Node* p = temp.head;
-			while (p!=NULL)
-			{
-				result.insert(p->_val, p->_exp);
-				p = p->next;
-			}
-			flag = true;
-		}
-
-	
+		p1 = p1->next;
+		p2 = l2.head;
 	}
+	temp.traverse();
 }
 int main()
 {
