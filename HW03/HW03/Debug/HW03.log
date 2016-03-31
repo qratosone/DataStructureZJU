@@ -1,3 +1,15 @@
+<<<<<<< HEAD
 ﻿  HW03.cpp
 List_Leaves.obj : error LNK2005: _main 已经在 HW03.obj 中定义
 C:\DATA\GitHub\DataStructureZJU\HW03\Debug\HW03.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
+=======
+﻿生成启动时间为 2016/3/18 1:58:00。
+     1>项目“D:\DATA\GitHub\DataStructureZJU\HW03\HW03\HW03.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         HW03.vcxproj -> D:\DATA\GitHub\DataStructureZJU\HW03\Debug\HW03.exe
+     1>已完成生成项目“D:\DATA\GitHub\DataStructureZJU\HW03\HW03\HW03.vcxproj”(Build 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:00.04
+>>>>>>> origin/master

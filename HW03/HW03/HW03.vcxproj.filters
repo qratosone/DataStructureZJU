@@ -29,10 +29,14 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="List_Leaves.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="HW03.cpp">
+=======
+    <ClCompile Include="HW3-2.cpp">
+>>>>>>> origin/master
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
