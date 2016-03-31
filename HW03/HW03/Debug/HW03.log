@@ -1,2 +1,3 @@
 ﻿  HW03.cpp
-  HW03.vcxproj -> C:\DATA\GitHub\DataStructureZJU\HW03\Debug\HW03.exe
+List_Leaves.obj : error LNK2005: _main 已经在 HW03.obj 中定义
+C:\DATA\GitHub\DataStructureZJU\HW03\Debug\HW03.exe : fatal error LNK1169: 找到一个或多个多重定义的符号
