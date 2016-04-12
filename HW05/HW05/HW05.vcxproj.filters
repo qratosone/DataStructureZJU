@@ -29,7 +29,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="HW05.cpp">
+    <ClCompile Include="FileTransfer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
