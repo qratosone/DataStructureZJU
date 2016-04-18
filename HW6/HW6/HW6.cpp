@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <cstring>
 #include <vector>
 #include <queue>
 #include <algorithm>
@@ -81,6 +82,7 @@ public:
 			int vertex = q.front();
 			q.pop();
 			cout << vertex << " ";
+			visited[vertex] = true;
 			sort(edges[vertex].begin(), edges[vertex].end());
 			for (int v:edges[vertex])
 			{
