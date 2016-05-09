@@ -29,7 +29,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="SavingJBsimple.cpp">
+    <ClCompile Include="SDS.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
