@@ -149,8 +149,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HW07.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="TravelRoute.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
